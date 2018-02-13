@@ -1,0 +1,27 @@
+{
+  "name": "fulton-topdog",
+  "version": "1.0.0",
+  "description": "A sample project using fulton, expose some APIs for Varick.",
+  "main": "./build/app.js",
+  "scripts": {
+    "build": "tsc -p ./",
+    "start": "ts-node ./src/app.ts",
+    "hot-start": "nodemon --exec ts-node -- ./src/app.ts",
+    "test": "test"
+  },
+  "keywords": [
+    "fulton",
+    "varick",
+    "api"
+  ],
+  "author": "tao@swarmnyc.com",
+  "license": "ISC",
+  "devDependencies": {
+    "fulton-server": "0.0.2",
+    "nodemon": "^1.14.12",
+    "ts-node": "^4.1.0"
+  },
+  "dependencies": {
+    "typescript": "^2.7.1"
+  }
+}
