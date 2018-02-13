@@ -1,9 +1,9 @@
 from node:8-slim
 
-env Topdog.options.database.url mongo://localhost:2717/topdogs
+env TopDogApp.options.database.url mongodb://localhost:2717/topdogs
+EXPOSE 3000
 
 WORKDIR /usr/src/app
-
 COPY package.json /usr/src/app/package.json
 COPY package-lock.json /usr/src/app/package-lock.json
 RUN npm install
