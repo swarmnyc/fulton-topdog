@@ -20,9 +20,14 @@ Edit tsconfig.json:
         /* Strict Type-Checking Options */
         "strict": true,                            /* Enable all strict type-checking options. */
         "strictNullChecks": false,              /* Disable strict null checks. */
+        "skipLibCheck": true,
 
         /* Source Map Options */
-        "sourceRoot": "./src"                    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+        "sourceRoot": "./src",                    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+
+        /* Experimental Options */
+        "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
+        "emitDecoratorMetadata": true         /* Enables experimental support for emitting type metadata for decorators. */
     }
 }
 ```

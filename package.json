@@ -12,16 +12,31 @@
   "keywords": [
     "fulton",
     "varick",
-    "api"
+    "api server"
   ],
-  "author": "tao@swarmnyc.com",
-  "license": "ISC",
+  "author": {
+    "name": "SWARM",
+    "email": "dev@swarmnyc.com",
+    "url": "https://swarmnyc.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarmnyc/fulton-topdog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/swarmnyc/fulton-topdog/issues"
+  },
+  "homepage": "https://github.com/swarmnyc/fulton-topdog",
+  "readme": "README.md",
+  "license": "MIT",
   "devDependencies": {
-    "fulton-server": "0.0.2",
     "nodemon": "^1.14.12",
     "ts-node": "^4.1.0"
   },
   "dependencies": {
+    "fulton-server": "0.0.4",
+    "mongodb": "^2.2.34",
+    "swagger-ui-express": "^2.0.15",
     "typescript": "^2.7.1"
   }
 }
