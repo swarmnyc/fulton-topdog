@@ -1,5 +1,5 @@
 import { AuthorEntity } from './author-entity';
-import { entity, objectIdColumn, column, manyToOne } from 'fulton-server';
+import { entity, objectIdColumn, column, manyToOne, relatedTo } from 'fulton-server';
 
 @entity('hotdogs')
 export class HotdogPostEntity {
@@ -9,7 +9,7 @@ export class HotdogPostEntity {
 	@column()
 	name: string;
 
-	@column({ select: false })
+	@column()
 	location: number[];
 
 	@column()
@@ -18,12 +18,10 @@ export class HotdogPostEntity {
 	@column()
 	review: string;
 
-	@column({ select: false })
+	@column()
 	picture: string;
 
-	@column()
-	authorId: string;
+	@relatedTo(AuthorEntity)
+	author: AuthorEntity;
 
-	@manyToOne(type => AuthorEntity, key => 'authorId')
-	author: AuthorEntity| string ;
 }

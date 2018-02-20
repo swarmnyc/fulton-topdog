@@ -1,10 +1,8 @@
-import { MongoEntityService } from 'fulton-server';
+import { EntityService } from 'fulton-server';
 import { HotdogPostEntity } from '../entities/hotdog-post-entity';
 
 
-export class HotdogEntityService extends MongoEntityService<HotdogPostEntity> {
-
-
+export class HotdogEntityService extends EntityService<HotdogPostEntity> {
 	constructor() {
 		super(HotdogPostEntity);
 	}

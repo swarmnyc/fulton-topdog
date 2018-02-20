@@ -1,4 +1,5 @@
-import { entity, objectIdColumn, column } from 'fulton-server';
+import { entity, objectIdColumn, column, manyToOne, manyToMany, relatedTo } from 'fulton-server';
+import { TagEntity } from './tag-entity';
 
 
 @entity('authors')
@@ -9,10 +10,9 @@ export class AuthorEntity {
 	@column()
 	name: string;
 
-	@column({ select: false })
+	@column()
 	imageUrl: string;
 
-	@column()
-	tagIds: string[];
-
+	@relatedTo(TagEntity)
+	tags: TagEntity[];
 }
