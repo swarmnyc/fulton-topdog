@@ -1,5 +1,5 @@
 import {
-	EntityService, IEntityService, inject, MongoEntityService, OperationOneResult, OperationResult, OperationStatus,
+	EntityService, IEntityService, inject, OperationOneResult, OperationResult, OperationStatus,
 	QueryParams,
 	Service
 } from 'fulton-server';
@@ -11,6 +11,10 @@ import { TimedLruCache } from '../helpers/timed-lru-cache';
 
 export class HotdogService extends Service implements IEntityService<HotdogPostEntity> {
 
+	findById(id: any, QueryParams?: QueryParams): Promise<OperationOneResult<HotdogPostEntity>> {
+		throw new Error("Method not implemented.");
+	}
+	
 	userCache: TimedLruCache<string, HotdogPostEntity[]>;
 
 	constructor(private hotdogEntityService: HotdogEntityService) {
