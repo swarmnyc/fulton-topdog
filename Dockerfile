@@ -1,6 +1,7 @@
 from node:8-slim
 
 env TopDogApp.options.database.url mongodb://localhost:2717/topdogs
+env TopDogApp.options.server.httpPort 3000;
 EXPOSE 3000
 
 WORKDIR /usr/src/app

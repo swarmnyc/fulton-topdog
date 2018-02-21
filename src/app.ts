@@ -18,6 +18,7 @@ export class TopDogApp extends FultonApp {
         options.formatter.jsonApi = true;
         options.cors.enabled = true;
         options.docs.enabled = true;
+        options.server.httpPort = 4000;
 
 		options.databases.set('default', {
 			type: 'mongodb',
