@@ -34,7 +34,7 @@
     "ts-node": "^4.1.0"
   },
   "dependencies": {
-    "fulton-server": "0.0.6",
+    "fulton-server": "0.0.7",
     "mongodb": "^2.2.34",
     "swagger-ui-express": "^2.0.15",
     "typescript": "^2.7.1"

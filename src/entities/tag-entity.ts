@@ -3,8 +3,7 @@ import { entity, objectIdColumn, column } from 'fulton-server';
 
 @entity('tags')
 export class TagEntity {
-	//TODO: change to @objectIdColumn({ type: "string" }) after fulton-server 0.0.7
-	@objectIdColumn()
+	@objectIdColumn({ type: String })
 	id: string;
 
 	@column()
