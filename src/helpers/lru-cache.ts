@@ -1,6 +1,7 @@
-export class LruCache<K, V> {
+import { injectable } from "fulton-server";
 
-
+@injectable()
+export class LruCache<K=any, V=any> {
 	private values: Map<K, V> = new Map<K, V>();
 	private maxEntries: number;
 
